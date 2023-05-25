@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDoc.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#elenco-rotte">#Elenco delle rotte</a></li>
+                <li><a href="#parametri">#Parametri</a></li>
+                <li><a href="#risposte">#Risposte</a></li>
+                <li><a href="#esempi">#Esempi di utilizzo</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>API Musicisti LGBT</h1>
+            <p>Questa API fornisce informazioni sui musicisti LGBT.</p>
+
+            <h2 id="elenco-rotte">Elenco delle rotte</h2>
+
+            <ul>
+                <li><code>GET /musicisti</code>: Restituisce un elenco di tutti i musicisti LGBT.</li>
+                <li><code>GET /musicisti/:nomeMusicista</code>: Restituisce le informazioni su un musicista specifico in base al nome.</li>
+                <li><code>GET /musicisti/nazionalita/:nazionalita</code>: Restituisce un elenco di musicisti LGBT in base alla nazionalità.</li>
+                <li><code>GET /musicisti/orientamento/:orientamentoSessuale</code>: Restituisce un elenco di musicisti LGBT in base all'orientamento sessuale.</li>      
+                <li><code>GET /musicisti/genere/:genere</code>: Restituisce un elenco di musicisti LGBT in base al genere musicale.</li>
+                <li><code>GET /musicisti/strumento/:strumento</code>: Restituisce un elenco di musicisti LGBT in base allo strumento musicale.</li>
+                <li><code>GET /musicisti/premi/:premio</code>: Restituisce un elenco di musicisti LGBT che hanno vinto un determinato premio.</li>
+            </ul>
+
+            <h2 id="parametri">Parametri</h2>
+
+            <p>Le rotte <code>/musicisti/nazionalita/:nazionalita</code>, <code>/musicisti/orientamento/:orientamentoSessuale</code>, <code>/musicisti/genere/:genere</code>, <code>/musicisti/strumento/:strumento</code> e <code>/musicisti/premi/:premio</code> accettano un parametro in base al quale effettuare la ricerca. Il parametro deve essere inserito nell'URL come segue:</p>
+        
+            <ul>
+                <li><code>/musicisti/nazionalita/americana</code>: Restituisce un elenco di musicisti LGBT americani.</li>
+                <li><code>/musicisti/orientamento/:orientamentoSessuale/bisessuale</code>: Restituisce un elenco di musicisti LGBT bisessuali.</li>
+                <li><code>/musicisti/genere/pop</code>: Restituisce un elenco di musicisti LGBT che fanno musica pop.</li>
+                <li><code>/musicisti/strumento/chitarra</code>: Restituisce un elenco di musicisti LGBT che suonano la chitarra.</li>
+                <li><code>/musicisti/premi/Grammy</code>: Restituisce un elenco di musicisti LGBT che hanno vinto un Grammy.</li>
+            </ul>
+
+            <h2 id="risposte">Risposte</h2>
+
+            <p>Le rotte <code>/musicisti</code>, <code>/musicisti/nazionalita/:nazionalita</code>, <code>/musicisti/orientamento/:orientamentoSessuale</code>, <code>/musicisti/genere/:genere</code>, <code>/musicisti/strumento/:strumento</code> e <code>/musicisti/premi/:premio</code> restituiscono un elenco di musicisti LGBT in formato JSON.</p>
+        
+            <p>Le rotte <code>/musicisti/:nomeMusicista</code> restituisce le informazioni su un singolo musicista in formato JSON.</  <h2>Esempi di utilizzo</h2>
+
+            <h2 id="esempi">Esempi di utilizzo</h2>
+
+            <ul>
+                <li>
+                <p>Per ottenere l'elenco completo dei musicisti:</p>
+                <pre><code>GET /musicisti</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere le informazioni su un musicista specifico (ad esempio Freddie Mercury):</p>
+                <pre><code>GET /musicisti/Freddie Mercury</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere l'elenco dei musicisti italiani:</p>
+                <pre><code>GET /musicisti/nazionalita/Italia</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere l'elenco dei musicisti bisessuali:</p>
+                <pre><code>GET /musicisti/orientamento/bisessuale</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere l'elenco dei musicisti che fanno musica pop:</p>
+                <pre><code>GET /musicisti/genere/pop</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere l'elenco dei musicisti che suonano la chitarra:</p>
+                <pre><code>GET /musicisti/strumento/chitarra</code></pre>
+                </li>
+                <li>
+                <p>Per ottenere l'elenco dei musicisti che hanno vinto un Grammy:</p>
+                <pre><code>GET /musicisti/premi/Grammy</code></pre>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script>
+
+        // Funzione per scorrere verso l'elemento selezionato
+        function scrollToElement(elementId) {
+            const element = document.getElementById(elementId);
+            element.scrollIntoView({ behavior:"smooth" });
+        }
+        
+    </script>
+
+</body>
+</html>

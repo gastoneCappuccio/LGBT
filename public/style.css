@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(235,235,239);
+}
+
+/* HEADER --------------------------------------------------------- */
+
+.container-header {
+    height: 12vh;
+}
+nav {
+    height: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+nav li {
+    margin: 0 10px;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: #ccc;
+}
+.btn-header {
+    border-radius: 12px;
+    width: 170px;
+    height: 26px;
+    font-size: 18px;
+    font-weight: 700;
+    float: right;
+    transition: all .3s;
+    color: #ea07f2;
+    /* border: 1px solid #ea07f2; */
+    text-align: center;
+    align-items: center;
+}
+.btn-header:hover {
+    background-color: #ea07f2;
+    color: white;
+    border: 1px solid white;
+    transition: all .3s;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+/* PRIMA PARTE --------------------------------------------------------------- */
+
+.container-prima-parte {
+    height: 72vh;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titolo-prima-parte {
+    font-size: 76px;
+    font-weight: 700;
+    color: rgb(41, 41, 41);
+}
+.titolo-gradient-prima-parte {
+    font-size: 90px;
+    font-weight: 900;
+    background: -webkit-linear-gradient(#ea07f2, #5900ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* SECONDA PARTE --------------------------------------------------------------- */
+
+.container-seconda-parte {
+    height: 100vh;
+    display: flex;
+    padding-inline: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.container-storia-testo {
+    width: 50%;
+    height: 80%;
+}
+.container-storia-img {
+    width: 50%;
+    height: 80%;
+}
+.titolo-seconda-parte {
+    font-size: 50px;
+    font-weight: 700;
+}
+.testo-seconda-parte {
+    font-size: 16px;
+    font-weight: 300;
+}
+.img-seconda-parte {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.btn-seconda-parte {
+    text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 10px;
+    float: right;
+    transition: all .3s;
+    color: #ea07f2;
+    border: none;
+}
+.btn-seconda-parte:hover {
+    background-color: #ea07f2;
+    color: white;
+    border: 1px solid white;
+    transition: all .3s;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+/* TERZA PARTE --------------------------------------------------------------- */
+
+.container-terza-parte {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-inline: 8%;
+    align-items: center;
+    flex-direction: column;
+}
+.container-titolo-terza-parte {
+    width: 55%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.container-titolo-btns {
+    display: flex;
+    width: 100%;
+    padding-top: 70px;
+    height: 100px;
+    margin-left: 20px;
+}
+.container-btns {
+    display: flex;
+    width: 40%;
+}
+#buttonM, #buttonP {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#buttonP.active, #buttonM.active {
+    background-color: #ea07f2;
+    color: white;
+}
+.cards-container, .cards-container2 {
+    display: none;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+.cards-container.show, .cards-container2.show {
+    display: flex;
+}
+.titolo-terza-parte {
+    font-size: 40px;
+    font-weight: 700;
+}
+.card {
+    border: 1px solid #ccc;
+    background-color: rgb(255,255,255);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 240px;
+    height: 320px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .25s;
+}
+.card:hover {
+    transition: all .25s;
+    scale: 1.035;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card h2 {
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+.card p {
+    font-size: 16px;
+    margin-top: 0;
+    background-color: white;
+}
+
+/* MODALE */
+
+.modal {
+    display: none; /* Nascondi la modale di default */
+    position: fixed; /* Posizionamento fisso */
+    z-index: 1; /* Imposta lo z-index sopra gli altri elementi */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Sfondo trasparente con effetto di oscuramento */
+    justify-content: center;
+    align-items: center;
+} 
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Limita la larghezza massima a 600px */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); /* Aggiunge un'ombra alla modale */
+    padding-bottom: 30px;
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#musicista-immagine {
+    max-width: 100%;
+    max-height: 30vh; /* Limita l'altezza massima dell'immagine a 80% dell'altezza della finestra */
+    object-fit: contain; /* Adatta l'immagine al contenitore mantenendo il rapporto d'aspetto */
+    display: block;
+    margin: 0 auto; /* Posiziona l'immagine al centro */
+    padding-bottom: 30px;
+    background-color: white;
+}
+.p-dettagli {
+    padding-inline: 30px;
+    font-weight: 300;
+    font-size: 15px;
+    background-color: white;
+    margin-bottom: 6px;
+}
+#musicista-nome {
+    padding-inline: 30px;
+    background-color: white;
+    font-size: 28px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.close {
+    background-color: #ea07f2;
+    color: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: all .3s;
+}
